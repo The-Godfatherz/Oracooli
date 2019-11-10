@@ -1,0 +1,204 @@
+<div class="tab-pane fade bg-white contentmain1"  id="mentor" role="tabpanel" aria-labelledby="mentor" style="overflow-y:scroll;overflow-x:hidden;height:87vh;transition: all 0.3s ease-in;
+   ">
+<div class="d-flex  justify-content-start " style="width:10rem;position:fixed;top:4.1rem;left:32.5rem;border:none;z-index:999">
+   <ul class="nav p-0">
+      <a class="ml-3 text-success " href="#"><i class="fas fa-heart fa-xs"></i> </a>
+      <a class="ml-3 text-success" href="#"><i class="fas fa-question fa-xs"></i></a>
+      <a class="ml-3 text-success " href="#"  aria-disabled="true"><i class="fas fa-home fa-xs"></i></a>
+      <a class="ml-3 text-success " href="#"  aria-disabled="true"><i class="fas fa-video fa-xs"></i></a>
+      <a class="ml-3 text-success " href="#"  aria-disabled="true"><i class="fas fa-image fa-xs"></i></a>
+   </ul>
+</div>
+<div class="row mt-4  justify-content-center   " style="height:;width:rem">
+   <div class="col-4  ml-2 mr-2   mentorcard " style="border:none;">
+      <div class="card-header p-2     bg-white  " style="background-color:;border:none;">
+         <a href="" style="font-size:11px;">
+         <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/images/avatar.png" style="width:2rem;height:2rem;object-fit:;"  alt="Card image cap" >
+         <span class="text-info">gggggg </span>
+         </a>
+      </div>
+      <div class="card-body p-0  text-dark " style="position:relative; ">
+         <div id="carouselExampleIndicators" class="carousel slide p-0"  data-interval="flase" data-ride="carousel" style="position:relative;">
+            <ol class="carousel-indicators ">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active   "></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1" class=" inc"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2" class=" inc"></li>
+            </ol>
+            <div class="carousel-inner ">
+               <div class="carousel-item active ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> Penguins</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+               <div class="carousel-item  ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> \gagagagaga</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Lighthouse1.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+               <div class="carousel-item  ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> LightHouse</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/17_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-4  ml-2 mr-2   mentorcard " style="border:none;">
+      <div class="card-header p-2     bg-white  " style="background-color:;border:none;">
+         <a href="" style="font-size:11px;">
+         <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/images/avatar.png" style="width:2rem;height:2rem;object-fit:;"  alt="Card image cap" >
+         <span class="text-info">dddddd </span>
+         </a>
+      </div>
+      <div class="card-body p-0  text-dark " style="position:relative; ">
+         <div id="carouselExampleIndicators" class="carousel slide p-0"  data-interval="flase" data-ride="carousel" style="position:relative;">
+            <ol class="carousel-indicators ">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active   "></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1" class=" inc"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2" class=" inc"></li>
+            </ol>
+            <div class="carousel-inner ">
+               <div class="carousel-item active ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> Penguins</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+               <div class="carousel-item  ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> \gagagagaga</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Lighthouse1.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+               <div class="carousel-item  ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> LightHouse</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/17_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-4  ml-2 mr-2   mentorcard " style="border:none;">
+      <div class="card-header p-2     bg-white  " style="background-color:;border:none;">
+         <a href="" style="font-size:11px;">
+         <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/images/avatar.png" style="width:2rem;height:2rem;object-fit:;"  alt="Card image cap" >
+         <span class="text-info">hhhhhh </span>
+         </a>
+      </div>
+      <div class="card-body p-0  text-dark " style="position:relative; ">
+         <div id="carouselExampleIndicators" class="carousel slide p-0"  data-interval="flase" data-ride="carousel" style="position:relative;">
+            <ol class="carousel-indicators ">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active   "></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1" class=" inc"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2" class=" inc"></li>
+            </ol>
+            <div class="carousel-inner ">
+               <div class="carousel-item active ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> Penguins</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+               <div class="carousel-item  ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> \gagagagaga</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Lighthouse1.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+               <div class="carousel-item  ">
+                  <div class="card">
+                     <span class="card-title " style="font-size:10.5px;font-family:monospace;"> LightHouse</span>
+                     <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/17_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row mt-4  justify-content-center   " style="height:;width:rem">
+      <div class="col-4  ml-2 mr-2   mentorcard " style="border:none;">
+         <div class="card-header p-2     bg-white  " style="background-color:;border:none;">
+            <a href="" style="font-size:11px;">
+            <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/images/avatar.png" style="width:2rem;height:2rem;object-fit:;"  alt="Card image cap" >
+            <span class="text-info">pppppp </span>
+            </a>
+         </div>
+         <div class="card-body p-0  text-dark " style="position:relative; ">
+            <div id="carouselExampleIndicators" class="carousel slide p-0"  data-interval="flase" data-ride="carousel" style="position:relative;">
+               <ol class="carousel-indicators ">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active   "></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1" class=" inc"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2" class=" inc"></li>
+               </ol>
+               <div class="carousel-inner ">
+                  <div class="carousel-item active ">
+                     <div class="card">
+                        <span class="card-title " style="font-size:10.5px;font-family:monospace;"> Penguins</span>
+                        <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                     </div>
+                  </div>
+                  <div class="carousel-item  ">
+                     <div class="card">
+                        <span class="card-title " style="font-size:10.5px;font-family:monospace;"> \gagagagaga</span>
+                        <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Lighthouse1.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                     </div>
+                  </div>
+                  <div class="carousel-item  ">
+                     <div class="card">
+                        <span class="card-title " style="font-size:10.5px;font-family:monospace;"> LightHouse</span>
+                        <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/17_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div class="row mt-4  justify-content-center   " style="height:;width:rem">
+      <div class="col-4  ml-2 mr-2   mentorcard " style="border:none;">
+         <div class="card-header p-2     bg-white  " style="background-color:;border:none;">
+            <a href="" style="font-size:11px;">
+            <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/images/avatar.png" style="width:2rem;height:2rem;object-fit:;"  alt="Card image cap" >
+            <span class="text-info">Ajychaudhari  </span>
+            </a>
+         </div>
+         <div class="card-body p-0  text-dark " style="position:relative; ">
+            <div id="carouselExampleIndicators" class="carousel slide p-0"  data-interval="flase" data-ride="carousel" style="position:relative;">
+               <ol class="carousel-indicators ">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active   "></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1" class=" inc"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2" class=" inc"></li>
+               </ol>
+               <div class="carousel-inner ">
+                  <div class="carousel-item active ">
+                     <div class="card">
+                        <span class="card-title " style="font-size:10.5px;font-family:monospace;"> Penguins</span>
+                        <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                     </div>
+                  </div>
+                  <div class="carousel-item  ">
+                     <div class="card">
+                        <span class="card-title " style="font-size:10.5px;font-family:monospace;"> \gagagagaga</span>
+                        <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/18_Lighthouse1.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                     </div>
+                  </div>
+                  <div class="carousel-item  ">
+                     <div class="card">
+                        <span class="card-title " style="font-size:10.5px;font-family:monospace;"> LightHouse</span>
+                        <img class="card-img-top mr-2  " src="http://localhost/CodeIgniter/uploads/17_Penguins.jpg" style="width:9rem;height:9rem;object-fit:;"  alt="Card image cap" >
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br>
+</div>
