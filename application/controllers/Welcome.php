@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 		}else{
 			$data = array();
 			 if($message != null && $message == 0){
-                $data['loginmessage']= "Email or Password is wrong ";
+                $data['loginmessage']= "Email or Password is incorrect ";
                 $data['logintype'] = "danger";
 
 			 } 

@@ -66,13 +66,13 @@
                   </div>
                </div>
                <div class="container   custom_contain mainmenteefeed " id="left-panel"  > </div>
-               <div class="d-flex bg-white text-center   "   style="position:fixed;top:12rem;width:3rem;left:15rem;">
-                  <ul class="list-group "  style="font-size:15px;z-index:9">
-                     <li class="list-group-item bg-info rounded-circle mb-3 "><a class="text-white" href="#Feeds" id="about"data-toggle="tooltip" title="All Feeds" data-placement="right"><i class="far fa-list-alt fa-xs  "></i></a></li>
-                     <li class="list-group-item bg-warning rounded-circle mb-3 "><a href="#Fs" class="text-white" ><i data-toggle="tooltip" data-placement="right" title="Videos" class="fas fa-video fa-xs"></i></a></li>
-                     <li class="list-group-item bg-primary rounded-circle mb-3  ">  <a href="#images2"class="text-white" id="projects"title="Images" data-toggle="tooltip" data-placement="right"><i class="far fa-images fa-xs"></i></a></li>
-                     <li class="list-group-item bg-success rounded-circle mb-3  "><a href="#" class="text-white" id="contact"data-toggle="tooltip" data-placement="right"title="Seminars"><i class="far fa-file-video fa-xs"></i></a></li>
-                     <li class="list-group-item bg-danger rounded-circle mb-3 "> <a href="#"class="text-white" id="quizzes"  data-toggle="tooltip" data-placement="right" title="Quizzes"><i class="fas fa-book-reader fa-xs"></i></a></li>
+               <div class="d-flex bg-white text-center  feedselector "   style="">
+                  <ul class="list-group feedselectorli"  style="">
+                     <li class="list-group-item bg-info rounded-circle mb-3 mr-3 "><a class="text-white" href="#Feeds" id="about"data-toggle="tooltip" title="All Feeds" data-placement="right"><i class="far fa-list-alt fa-xs  "></i></a></li>
+                     <li class="list-group-item bg-warning rounded-circle mb-3 mr-3 "><a href="#Fs" class="text-white" ><i data-toggle="tooltip" data-placement="right" title="Videos" class="fas fa-video fa-xs"></i></a></li>
+                     <li class="list-group-item bg-primary rounded-circle mb-3 mr-3 ">  <a href="#images2"class="text-white" id="projects"title="Images" data-toggle="tooltip" data-placement="right"><i class="far fa-images fa-xs"></i></a></li>
+                     <li class="list-group-item bg-success rounded-circle mb-3 mr-3  "><a href="#" class="text-white" id="contact"data-toggle="tooltip" data-placement="right"title="Seminars"><i class="far fa-file-video fa-xs"></i></a></li>
+                     <li class="list-group-item bg-danger rounded-circle mb-3 mr-3 "> <a href="#"class="text-white" id="quizzes"  data-toggle="tooltip" data-placement="right" title="Quizzes"><i class="fas fa-book-reader fa-xs"></i></a></li>
                   </ul>
                </div>
             </div>

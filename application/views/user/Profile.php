@@ -6,7 +6,7 @@
       
       <div class="card profilecard" >
          
-         <img class="card-img-top " style="height:10rem;object-fit:cover" src="<?php echo get_imagepath($profile_image);?>" alt="Card image cap" >
+         <img class="card-img-top profileimage" style="" src="<?php echo get_imagepath($profile_image);?>" alt="Card image cap" >
          
        
 
@@ -80,10 +80,10 @@
       </div>
      
    </div>
-   <div class="card  bg-info  w-25 " style="position:absolute;top:;left:35rem;font-family: monospace;">
-       
-<button href="#" style="background-color: #76323f" class="flex-fill btn text-white btn-block btn-sm"   <?php if ($experience == null){echo "disabled='disabled'";}?> data-toggle="modal" data-target="#uploadP" >Upload</button>
+    <div class="card  bg-info  w-25 profileuploadbtn " style="">
+<button href="#" style="background-color: #76323f" class="flex-fill btn text-white btn-block btn-sm" data-toggle="modal" data-target="#uploadP">Upload</button>
        </div>
+
 </div>
 <script>
    $('button').click(function(){

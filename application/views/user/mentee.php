@@ -5,10 +5,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>Oracooli/Home</title>
-       <link rel="icon" type="image/png" sizes="96x96" href="<?php echo str_replace("index.php/","",base_url());?>images/favicon.png"">
+       <link rel="icon" type="image/png" sizes="96x96" href="<?php echo str_replace("index.php/","",base_url());?>images/favicon.png">
       <!-- Bootstrap CSS CDN -->
-      <link href="<?php echo str_replace("index.php/","",base_url()); ?>css/bootstrap.css" rel="stylesheet" />
-      <!-- <link href="<?php //echo str_replace("index.php/","",base_url()); ?>css/bootstrap-theme.css" rel="stylesheet" /> -->
+      <link href="<?php echo str_replace('index.php/','',base_url()); ?>css/bootstrap.css"  rel="stylesheet" />
+      
       <link href="<?php echo str_replace("index.php/","",base_url()); ?>css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

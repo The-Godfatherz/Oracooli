@@ -15,7 +15,7 @@
       
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>Oracooli/Inbox</title>
-       <link rel="icon" type="image/png" sizes="96x96" href="<?php echo str_replace("index.php/","",base_url());?>images/favicon.png"">
+       <link rel="icon" type="image/png" sizes="96x96" href="<?php echo str_replace("index.php/","",base_url());?>images/favicon.png">
       <!-- Bootstrap CSS CDN -->
       <link href="<?php echo str_replace("index.php/","",base_url()); ?>css/bootstrap.css" rel="stylesheet" />
       <!-- <link href="<?php //echo str_replace("index.php/","",base_url()); ?>css/bootstrap-theme.css" rel="stylesheet" /> -->
