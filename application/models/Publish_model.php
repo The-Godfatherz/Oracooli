@@ -186,12 +186,12 @@ class Publish_model extends CI_Model{
             <div class="card-img-overlay" style="width:1px;height:1px;top:3rem">
                <div class="clike">
                   <ul class="list-group  ">
-                     <button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$id.','.$row->post_id.')"><i class="fas fa-heart "></i>
-                     </button><br>
-                     <button type="button" onclick="savePostlike('.$id.','.$row->post_id.')" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
-                     </button> <br>
-                     <button type="button" onclick="saveBookmark('.$id.','.$row->post_id.')" class="btn btn-primary btn-circle2"> <i class="fas fa-bookmark"></i>
-                     </button>
+                     <span style="font-size:12px;"><button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$id.','.$row->post_id.')"><i class="fas fa-heart "></i>
+                     </button>1.3M</span><br>
+                     <span><button type="button" onclick="savePostlike('.$id.','.$row->post_id.')" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
+                     </button></span> <br>
+                     <span><button type="button" onclick="saveBookmark('.$id.','.$row->post_id.')" class="btn btn-primary btn-circle2"> <i class="fas fa-bookmark"></i>
+                     </button></span>
                   </ul>
                </div>
             </div>
@@ -344,12 +344,12 @@ class Publish_model extends CI_Model{
             echo '<div class="card-img-overlay" style="width:1px;height:1px;top:3rem">
                <div class="clike">
                   <ul class="list-group  ">
-                     <button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$row->user_id.','.$row->post_id.')"><i class="fas fa-heart "></i>
-                     </button><br>
-                     <button type="button" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
-                     </button> <br>
-                      <button type="button" class="btn btn-primary btn-circle2" onclick="saveBookmark('.$id.','.$row->post_id.')"> <i class="fas fa-bookmark"></i>
-                     </button>
+                     <span style="font-size:12px;color:black"><button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$row->user_id.','.$row->post_id.')"><i class="fas fa-heart "></i>
+                     </button>1.3M</span><br>
+                     <span><button type="button" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
+                     </button> </span><br>
+                      <span><button type="button" class="btn btn-primary btn-circle2" onclick="saveBookmark('.$id.','.$row->post_id.')"> <i class="fas fa-bookmark"></i>
+                     </button></span>
                   </ul>
                </div>
             </div>
@@ -375,9 +375,25 @@ class Publish_model extends CI_Model{
                    <span class="text-dark  comms">
                    <img class="card-img-top" src="'.get_imagepath($comment_data['profile_image']).'"  class="media-object" style="width:40px; height:40px;border-radius:50%">
                         ' .$comment_data['first_name'].' '.$comment_data['last_name'].' 
-                        <span class="float-right">
+                                <span style="font-size:11px"><a class="" data-toggle="collapse" href="#collapsecomment" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Reply
+                          </a>
+                           <div class="collapse mt-4" id="collapsecomment">
+                    <textarea  placeholder="Add a Comment" class="comments_textarea border-top-0 border-bottom border-left-0 border-right-0  commentarea" id="commentstextarea" ></textarea>
+                       <div class="mt-2">
+
+                        <a href="#" id="commentbtn" class="commentbtn btn btn-outline-dark btn-sm float-right mr-1" style="border-radius:10px" >Comment</a><br><br>
+
+
+                        </div>
+                        </div>
+                          </span>
+
+                            <span class="float-right">
+                        
                           <button type="button"  class="btn btn-link text-danger " onclick="savePostlike('.$id.','.$row->post_id.')"><i class="fas fa-heart fa-xs "></i>
                      </button>
+                     
                      <div class="btn-group">
                           <a  class="btn btn-link text-secondary " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-h"></i>
@@ -393,6 +409,44 @@ class Publish_model extends CI_Model{
                  <span class="text-secondary ml-5">
                  '.$comment_data['comment'].' 
                  </span>
+                 <div class=" ml-5">
+                   <span class="text-dark  comms">
+                   <img class="card-img-top" src="http://localhost/CodeIgniter/images/1_Vasanti.jpg" style="width:20px; height:20px;border-radius:50%">
+                        Gaurav Sagdeo 
+                               <span style="font-size:11px"><a class="" data-toggle="collapse" href="#collapsecomment" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Reply
+                          </a>
+                           <div class="collapse mt-4" id="collapsecomment">
+                    <textarea  placeholder="Add a Comment" class="comments_textarea border-top-0 border-bottom border-left-0 border-right-0  commentarea" id="commentstextarea" ></textarea>
+                       <div class="mt-2">
+
+                        <a href="#" id="commentbtn" class="commentbtn btn btn-outline-dark btn-sm float-right mr-1" style="border-radius:10px" >Comment</a><br><br>
+
+
+                        </div>
+                        </div>
+                          </span>
+                            <span class="float-right">
+                        
+                          <button type="button" class="btn btn-link text-danger " onclick="savePostlike(1,3)"><i class="fas fa-heart fa-xs "></i>
+                     </button>
+                     
+                     <div class="btn-group">
+                          <a class="btn btn-link text-secondary " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </a>
+                          <div class="dropdown-menu " style="font-size:12px; text-align:center">
+                            <a class="dropdown-item" href="#">Delete</a>
+                            <a class="dropdown-item" href="#">Report</a>
+                            
+                          </div>
+                        </div>
+                        </span>
+                   </span> <br>
+                 <span class="text-secondary ml-5">
+                 g 
+                 </span>
+            </div>
             </div> <br>';
             //echo $comment_data['comment'];
           }
@@ -508,12 +562,12 @@ class Publish_model extends CI_Model{
             echo '<div class="card-img-overlay" style="width:1px;height:1px;top:3rem">
                <div class="clike">
                   <ul class="list-group  ">
-                     <button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$row->user_id.','.$row->post_id.')"><i class="fas fa-heart "></i>
-                     </button><br>
-                     <button type="button" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
-                     </button> <br>
-                     <button type="button" class="btn btn-primary btn-circle2" onclick="saveBookmark('.$id.','.$row->post_id.')"> <i class="fas fa-bookmark"></i>
-                     </button>
+                    <span> <button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$row->user_id.','.$row->post_id.')"><i class="fas fa-heart "></i>
+                     </button></span><br>
+                    <span> <button type="button" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
+                     </button> </span><br>
+                     <span><button type="button" class="btn btn-primary btn-circle2" onclick="saveBookmark('.$id.','.$row->post_id.')"> <i class="fas fa-bookmark"></i>
+                     </button></span>
                   </ul>
                </div>
             </div>

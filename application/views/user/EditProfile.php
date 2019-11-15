@@ -34,17 +34,20 @@
             <div class="card  editdetails">
                <a  href="#"class="editclose" style="color:red;margin-top:%;margin-right:%;font-size:15px;right:0 "class="close " data-dismiss="modal"><i class="fas fa-times "></i></a>
                <div class="editinfo"  >
-                  <ol class="carousel-indicators mx-auto" style="background-color:white;width:5rem;font-size:10px;">
-                     <a style="color:;"  href="#carouseledit" data-slide="prev" class="active"><i class="fas fa-angle-left fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     <a  style="color:;" href="#carouseledit" data-slide="next" id="next_indicator"><i class="fas fa-angle-right fa-2x"></i></a>
-                  </ol>
-                  <div class="carousel slide media-carousel "id="carouseledit"  data-interval="false" data-ride="carousel" style="background-color:transparent"  >
-                     <div class="carousel-inner" >
-                        <div class="carousel-item show active">
-                           <form id="personal_information" style="background-color:white;">
-                              <h4 style="text-align:center;font-size:15px;background-color:transparent">
+<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Personal Information</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mentor Information</a>
+  </li>
+ 
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><form id="personal_information" style="background-color:white;">
+                              <!--<h3 style="text-align:center;font-size:15px;background-color:transparent">
                                  Personal Information
-                              </h4>
+                              </h3>-->
                               <br>
                               <div class="pfont">
                                  <div class="row form-group">
@@ -85,11 +88,10 @@
                                  <button type="button"  class="btn btn-info" style="margin-left:85%;outline:none;float:right;text-decoration:none;font-size:15px " onclick='saveProfileData("personal_information")'>Save Changes</button>
                               </div>
                            </form>
-                        </div>
-                        <div class="carousel-item ">
+                        
+                        
                            <form id="mentee_information">
-                              <h4 style="text-align:center;font-size:15px">Mentee Information</h4>
-                              <br><br>
+                             
                               <div class="pfont">
                                  <div class="row form-group">
                                     <div class="col">
@@ -118,16 +120,12 @@
 								   <button type="button" onclick="location.reload()" class="btn btn-info "style="margin-left:85%;outline:none;float:right;text-decoration:none;" >Confirm</button>
                               </div>
                            </form>
-                        </div>
-						<script>
-						
-
-</script>
-						</script>
-                        <div class="carousel-item">
-                           <form id="mentor_information">
-                              <h4 style="text-align:center;font-size:15px">Mentor Information</h4>
-                              <br><br>
+                       
+						</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                           <form id="mentor_information"> 
+                             <!-- <h4 style="text-align:center;font-size:15px">Mentor Information </h4>
+                              <br><br>-->
                               <div class=" pfont " style="">
                                  <div class="row form-group">
                                     <div class="col">
@@ -163,10 +161,14 @@
                               </div>
                              
                            </form>
-                        </div>
+                        
                      </div>
-                  </div>
-               </div>
+  
+</div>
+                        
+                        
+                  
+               
             </div>
          </div>
       </div>
