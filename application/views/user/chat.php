@@ -101,7 +101,7 @@
       <div class=" col  p-0  ">
          <!-- Selection Panel start -->
          <nav style="#6D7993">
-            <div class="nav nav-tabs nav-justified bg-light " style="background: " id="nav-tab" role="tablist"> 
+            <div class="nav chattabs nav-tabs nav-justified bg-light " style="background: " id="nav-tab" role="tablist"> 
                <a class="nav-item nav-link  " id="nav-home-tab" data-toggle="tab" href="#tab1default" role="tab" aria-controls="nav-home" aria-selected="true">Mentor </a>
                <a class="nav-item nav-link  active" id="nav-profile-tab" data-toggle="tab" href="#tab2default" role="tab" aria-controls="nav-profile" aria-selected="false">Friends</a>
             </div>

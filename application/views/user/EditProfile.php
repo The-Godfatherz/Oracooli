@@ -34,7 +34,7 @@
             <div class="card  editdetails">
                <a  href="#"class="editclose" style="color:red;margin-top:%;margin-right:%;font-size:15px;right:0 "class="close " data-dismiss="modal"><i class="fas fa-times "></i></a>
                <div class="editinfo"  >
-<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+<ul class="nav edittabs nav-tabs nav-fill" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Personal Information</a>
   </li>
