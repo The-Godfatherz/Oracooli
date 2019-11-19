@@ -8,7 +8,7 @@ scroll-behavior: smooth;
 }
 /*Header Start*/
 .navbar{
-background-color: rgb(100, 112, 148);
+background-color: white;
 position: sticky;
 top:0;
 z-index:5;
@@ -96,16 +96,18 @@ border-right:none;
 font-size:12px;
 font-family:monospace;
 text-align: center;
-color:black;
-    height:4vh;
+color:white;
+height:5.5vh;
+transition: 0.8s ease-out; 
 }
 .hometabs.nav-tabs a[data-toggle="tab"]:hover{
 border-top:none;
 border-bottom:none;
 border-left:none;
 border-right:none;
-color:white;
+color:#343a40;
 }
+
 .hometabs.nav-tabs a[data-toggle="tab"].active{
 border-top:none;
 border:none;
@@ -114,9 +116,8 @@ font-size:16px;
 border-left:none;
 border-right:none;
 background-color:transparent;
-transition: all 0.3s ease-in-out;
-    padding-bottom: 15px;
-
+transition: 0.5s ease-in;    
+box-shadow:5px 5px 5px 0 rgba(0, 0, 0, 0.2)
 }
 .hometabs.nav-tabs a[data-toggle="tab"].active:hover{
 border-top:none;
@@ -155,7 +156,7 @@ border-right:none;
 POwer Off And Log OUT Buttons box
 ----------------------------------------------------- */ 
 .sideicon1{
-background-color:darkgray;
+background-color:#343a40;
 margin-left:10rem;
 transition: all 0.8s ease-in-out;
 transition-delay: 0.2s;
@@ -977,7 +978,7 @@ color:white;
 text-align:center;
 font-size:13px;
 z-index:4;
-background-color:midnightblue;
+background-color:teal;
 }
 .communitybox.active #mySidenav2 {
 z-index:289;

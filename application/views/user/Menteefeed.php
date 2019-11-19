@@ -13,16 +13,19 @@
    <div class="row p-0 ">
       <!-- TABS OPTION START-->
       <div class="col bg-white " style="">
+         
          <ul class="nav hometabs nav-tabs justify-content-center  p-0 mt-1 " id="myTab" role="tablist">
+             
             <li class="nav-item w-25 ml-1 mr-1 "  style="
     background-color: dodgerblue;
-">
+"> 
+                  
                <a class="nav-link show active " id="home-tab" data-toggle="tab" href="#friends1" role="tab" aria-controls="home" aria-selected="true">Friends</a>
             </li>
             <li class="nav-item w-25 bg-success ml-1 mr-1">
                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#mentor" role="tab" aria-controls="profile" aria-selected="false">My Mentors</a>
             </li>
-            <li class="nav-item w-25 ml-1 mr-1 " style="background-color:burlywood">
+            <li class="nav-item w-25 ml-1 mr-1 " style="background-color:#ffc107">
                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#global" role="tab" aria-controls="contact" aria-selected="false">Global</a>
             </li>
            <!--  <li class="nav-item">

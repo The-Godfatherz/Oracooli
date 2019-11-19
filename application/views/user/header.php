@@ -50,32 +50,32 @@
    </div>
 </div>
 
-<nav class="navbar p-0 bg-dark " style="">
+<nav class="navbar p-0  " style="">
     
    <div class="d-flex p-0 ml-4 " style="color:;">
     
        
-      <a class="btn btn-link ml-1 " style="color:white;" data-toggle="tooltip" data-placement="bottom" title="Home" href="<?php echo base_url().'mentee';?>"> <i class="fas fa-home fa-lg homeicon  "></i> Home</a>
+      <a class="btn btn-link ml-1 " style="color:black;" data-toggle="tooltip" data-placement="bottom" title="Home" href="<?php echo base_url().'mentee';?>"> <i class="fas fa-home fa-lg homeicon  "></i> Home</a>
        
-      <a class="btn btn-link ml-1 "style="color:white;" data-toggle="tooltip" data-placement="bottom" title="Live Data" href="#"><i class="fas fa-chart-line fa-lg livedataicon "  data-toggle="modal" data-target="#livedata" data-backdrop="static" ></i> Live Data</a>
+      <a class="btn btn-link ml-1 "style="color:black;" data-toggle="tooltip" data-placement="bottom" title="Live Data" href="#"><i class="fas fa-chart-line fa-lg livedataicon "  data-toggle="modal" data-target="#livedata" data-backdrop="static" ></i> Live Data</a>
 
        
-      <a class="btn btn-link ml-1 " style="color:white;" data-toggle="modal" data-target="#search" data-backdrop="static" href="#" ><i class="fas fa-search fa-lg searchicon "  data-toggle="tooltip" data-placement="bottom" title="Search"  ></i> Search</a>
+      <a class="btn btn-link ml-1 " style="color:black;" data-toggle="modal" data-target="#search" data-backdrop="static" href="#" ><i class="fas fa-search fa-lg searchicon "  data-toggle="tooltip" data-placement="bottom" title="Search"  ></i> Search</a>
        
    </div>
      
      <span   style=""class="mx-auto nav-logo ">
-      <a href="<?php echo base_url().'mentee';?>" class="" style="text-decoration:none;font-family:LeagueGothic-Regular;color: white;font-size:25px">Oracooli <sub style="font-size:12px;color:red">Beta</sub> </a></span>
+      <a href="<?php echo base_url().'mentee';?>" class="" style="text-decoration:none;font-family:LeagueGothic-Regular;color:black;font-size:25px">Oracooli <sub style="font-size:12px;color:red">Beta</sub> </a></span>
     
    
     
    <div class="btn-group mr-1" >
-      <a class="nav-link navbarsmall text-white"class="dropdown-toggle" data-toggle="dropdown"  title="Notifications" href="#"><i data-toggle="tooltip" data-placement="bottom" class=" fas fa-exclamation-circle fa-lg notificationicon"></i> <!-- <span style="font-size:8px" class="badge badge-light">4</span>--> Notifications</a>
+      <a class="nav-link navbarsmall text-dark"class="dropdown-toggle" data-toggle="dropdown"  title="Notifications" href="#"><i data-toggle="tooltip" data-placement="bottom" class=" fas fa-exclamation-circle fa-lg notificationicon"></i> <!-- <span style="font-size:8px" class="badge badge-light">4</span>--> Notifications</a>
       <div class=" dropdown-menu text-center  border-bottom-3 border-left-2 border-right-2 border-top-2   dropdown-menu-right dropdown-menu-lg-left notification-dropdown" >
          <Span class="text-dark   font-weight-lighter text-monospace" style=font-size:12px;>No Notifications</Span>   
       </div>
    </div>
-   <a class="btn btn-link mr-1 " style="color:white;"data-toggle="tooltip" data-placement="bottom" title="Mentor"href="<?php echo base_url().'mentor';?>"><i class="fas fa-user-graduate fa-lg Mentorprofileicon"></i> Mentor Profile</a>
+   <a class="btn btn-link mr-1 " style="color:black;"data-toggle="tooltip" data-placement="bottom" title="Mentor"href="<?php echo base_url().'mentor';?>"><i class="fas fa-user-graduate fa-lg Mentorprofileicon"></i> Mentor Profile</a>
  
 </nav>
 <div class="modal fade" style=""id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
