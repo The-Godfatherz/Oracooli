@@ -12,21 +12,35 @@
 <div class="card bg-info" style="position:fixed;bottom:2rem;left:0;right:0;top:2.5rem;border:none;height:100vh">
    <div class="row p-0 ">
       <!-- TABS OPTION START-->
-      <div class="col bg-white " style="">
+      <div class="col bg-white " style="z-index:1">
          
-         <ul class="nav hometabs nav-tabs justify-content-center  p-0 mt-1 " id="myTab" role="tablist">
+         <ul class="nav hometabs nav-tabs justify-content-center  p-0 mt-1 mb-3 " id="myTab" role="tablist">
              
             <li class="nav-item w-25 ml-1 mr-1 "  style="
-    background-color: dodgerblue;
+    background-color:lightskyblue;
 "> 
                   
-               <a class="nav-link show active " id="home-tab" data-toggle="tab" href="#friends1" role="tab" aria-controls="home" aria-selected="true">Friends</a>
+               <a class="nav-link show active " id="home-tab" data-toggle="tab" href="#friends1" role="tab" aria-controls="home" aria-selected="true">Friends
+                <div id="demo1" class="block1 bg-dark "></div>
+                  <div id="demo1" class="block2 bg-dark"></div>
+                
+                </a>
+                
+                <style>
+         
+                </style>
             </li>
-            <li class="nav-item w-25 bg-success ml-1 mr-1">
-               <a class="nav-link" id="profile-tab" data-toggle="tab" href="#mentor" role="tab" aria-controls="profile" aria-selected="false">My Mentors</a>
+            <li class="nav-item w-25 ml-1 mr-1" style="background-color:forestgreen">
+               <a class="nav-link" id="profile-tab" data-toggle="tab" href="#mentor" role="tab" aria-controls="profile" aria-selected="false">My Mentors
+                  <div id="demo1" class="block1 bg-dark "></div>
+                  <div id="demo1" class="block2 bg-dark"></div>
+                </a>
             </li>
             <li class="nav-item w-25 ml-1 mr-1 " style="background-color:#ffc107">
-               <a class="nav-link" id="contact-tab" data-toggle="tab" href="#global" role="tab" aria-controls="contact" aria-selected="false">Global</a>
+               <a class="nav-link" id="contact-tab" data-toggle="tab" href="#global" role="tab" aria-controls="contact" aria-selected="false">Global
+                  <div id="demo1" class="block1 bg-dark "></div>
+                  <div id="demo1" class="block2 bg-dark"></div>
+                </a>
             </li>
            <!--  <li class="nav-item">
                <a class="nav-item nav-link expandbtn "  data-toggle="collapse" href="#trending" aria-expanded="false" aria-controls="trending">Trending</a>
@@ -38,7 +52,7 @@
             <!-- frineds tab -->
             <div class="tab-pane fade show active bg-white mx-auto contentmain" id="friends1" role="tabpanel" aria-labelledby="home-tab"  style="overflow-y:scroll;overflow-x:hidden;height:93vh ;transition: all 0.3s ease-in;
                " >
-               <div class="d-flex text-center mx-auto   bg-dark rounded " style="width:10.2rem;;border:none;z-index:25;">
+               <div class="d-flex text-center    bg-dark rounded " style="width:10.2rem;;border:none;z-index:25;height:4vh;position:sticky;top:3rem;left:15rem;line-height:1.5rem">
                   <a href="#Upload" id="about" class=" flex-fill rounded  bg-danger text-white"  data-toggle="collapse" href="#Upload" role="button" aria-expanded="false" aria-controls="collapseExample" role="button"style="font-size:12px;z-index:25"><i class="fas fa-plus">  </i> Post</a>
                </div>
                <div class=" collapse mx-auto" id="Upload" style="width:25rem;position:;;z-index:2;transition: all 0.6s cubic-bezier(0.810, -0.330, 0.345, 1.375);
@@ -73,11 +87,11 @@
                <div class="container   custom_contain mainmenteefeed " id="left-panel"  > </div>
                <div class="d-flex bg-white text-center  feedselector "   style="">
                   <ul class="list-group feedselectorli"  style="">
-                     <li class="list-group-item bg-info rounded-circle mb-3 mr-3 "><a class="text-white" href="#Feeds" id="about"data-toggle="tooltip" title="All Feeds" data-placement="right"><i class="far fa-list-alt fa-xs  "></i></a></li>
-                     <li class="list-group-item bg-warning rounded-circle mb-3 mr-3 "><a href="#Fs" class="text-white" ><i data-toggle="tooltip" data-placement="right" title="Videos" class="fas fa-video fa-xs"></i></a></li>
-                     <li class="list-group-item bg-primary rounded-circle mb-3 mr-3 ">  <a href="#images2"class="text-white" id="projects"title="Images" data-toggle="tooltip" data-placement="right"><i class="far fa-images fa-xs"></i></a></li>
-                     <li class="list-group-item bg-success rounded-circle mb-3 mr-3  "><a href="#" class="text-white" id="contact"data-toggle="tooltip" data-placement="right"title="Seminars"><i class="far fa-file-video fa-xs"></i></a></li>
-                     <li class="list-group-item bg-danger rounded-circle mb-3 mr-3 "> <a href="#"class="text-white" id="quizzes"  data-toggle="tooltip" data-placement="right" title="Quizzes"><i class="fas fa-book-reader fa-xs"></i></a></li>
+                      <li class="list-group-item rounded-circle mb-3 mr-3 "><a class="" href="#Feeds" id="about"data-toggle="tooltip" title="All Feeds" data-placement="right"><i class="far fa-list-alt fa-xs  "></i></a></li>
+                     <li class="list-group-item  rounded-circle mb-3 mr-3 "><a href="#Fs" class="" ><i data-toggle="tooltip" data-placement="right" title="Videos" class="fas fa-video fa-xs"></i></a></li>
+                     <li class="list-group-item  rounded-circle mb-3 mr-3 ">  <a href="#images2"class="" id="projects"title="Images" data-toggle="tooltip" data-placement="right"><i class="far fa-images fa-xs"></i></a></li>
+                     <li class="list-group-item  rounded-circle mb-3 mr-3  "><a href="#" class="" id="contact"data-toggle="tooltip" data-placement="right"title="Seminars"><i class="far fa-file-video fa-xs"></i></a></li>
+                     <li class="list-group-item  rounded-circle mb-3 mr-3 "> <a href="#"class="" id="quizzes"  data-toggle="tooltip" data-placement="right" title="Quizzes"><i class="fas fa-book-reader fa-xs"></i></a></li>
                   </ul>
                </div>
             </div>
