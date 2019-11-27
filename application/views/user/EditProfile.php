@@ -8,15 +8,15 @@
             <div class="editinfo"  >
                 
                <ul class="nav edittabs nav-tabs nav-fill" id="myTab" role="tablist">
-                  <li class="nav-item">
-                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profile Information</a>
+                  <li class="nav-item profileinfotab" style="">
+                     <a class="nav-link " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profile Information</a>
                   </li>
-                  <li class="nav-item">
-                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mentor Information</a>
+                  <li class="nav-item Mentorinfotab" >
+                     <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Mentor Information</a>
                   </li>
                </ul>
                <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
                      <form id="personal_information" style="background-color:transparent;">
                         <!--<h3 style="text-align:center;font-size:15px;background-color:transparent">
                            Personal Information
@@ -90,43 +90,57 @@
                         </div>
                      </form>
                   </div>
-                  <div class="tab-pane fade mt-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                     <form id="mentor_information ">
-                        <!-- <h4 style="text-align:center;font-size:15px">Mentor Information </h4>
-                           <br><br>-->
-                        <div class=" pfont " style="">
-                           <div class="row form-group">
-                              <div class="col">
-                                 <input type="text" class="form-control" id="Jobs" placeholder="Jobs" name="jobs" value="<?php echo $jobs ?? '';?>">
-                                 <blockquote id="" class="form-text text-dark">Jobs</blockquote>
+                  <div class="tab-pane fade mt-3  show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <form id="mentor_information">
+                              <div class=" pfont " style="">
+                                 
                               </div>
-                              <div class="col">
-                                 <input type="text" class="form-control" id="Experience" placeholder="Experience" name="experience" value="<?php echo $experience ?? '';?>">
+                              <div  class="pfont ">
+                                  <div class="row form-group">
+                                    <div class="col">
+                                       <blockquote id="" class="form-text text-dark">Expertise
+                                    </blockquote>
+                                    <input type="text" class="form-control"  placeholder="Expertise" name="expertise" value="<?php echo $expertise ?? '';?>">
+                                       
+                                    </div>
+                                    <div class="col">
                                  <blockquote id="" class="form-text text-dark">Experience</blockquote>
+                                       <input type="text" class="form-control" id="Experience" placeholder="Experience" name="experience" value="<?php echo $experience ?? '';?>">
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                  <div class="row form-group">
+                                    <div class="col">
+                                        <blockquote id="" class="form-text text-dark">Jobs</blockquote>
+                                       <input type="text" class="form-control" id="Jobs" placeholder="Jobs" name="jobs" value="<?php echo $jobs ?? '';?>">
+                                       
+                                    </div>
+                                    <div class="col">
+                                         <blockquote id="" class="form-text text-dark">Job Designation
+                                    </blockquote>
+                                    <input type="text" class="form-control" id="Job Designation" placeholder="Job Designation" name="designation" value="<?php echo $designation ?? '';?>">
+                                        
+                                      
+                                    </div>
+                                 </div>
+                                  <br>
+                                 <div class=" form-group">
+                                      <blockquote id="" class="form-text text-dark">Acheivement
+                                    </blockquote>
+                                    <input type="text" class="form-control "id="Acheivement"  placeholder="Acheivement" name="achievement" value="<?php echo $achievement ?? '';?>">
+                                   
+                                 </div>
+                                   <div class=" form-group">
+                                <textarea placeholder="Other" class="form_textarea border-top-0 border-bottom border-left-0 border-right-0 "  spellcheck="false"></textarea>
+                                 </div>
                               </div>
-                           </div>
-                        </div>
-                        <div  class="pfont ">
-                           <div class="form-group">
-                              <input type="text" class="form-control" id="Job Designation" placeholder="Job Designation" name="designation" value="<?php echo $designation ?? '';?>">
-                              <blockquote id="" class="form-text text-dark">Job Designation
-                              </blockquote>
-                           </div>
-                           <div class=" form-group">
-                              <input type="text" class="form-control"  placeholder="Expertise" name="expertise" value="<?php echo $expertise ?? '';?>">
-                              <blockquote id="" class="form-text text-dark">Expertise
-                              </blockquote>
-                           </div>
-                           <div class=" form-group">
-                              <input type="text" class="form-control "id="Acheivement"  placeholder="Acheivement" name="achievement" value="<?php echo $achievement ?? '';?>">
-                              <blockquote id="" class="form-text text-dark">Acheivement
-                              </blockquote>
-                           </div>
-                        </div>
-                        <div class="form-inline pfont">
-                           <button type="button"  class="btn btn-info " style="margin-left:85%;outline:none;float:right;text-decoration:none; " onclick='saveProfileData("mentor_information")'>Save Changes</button>
-                        </div>
-                     </form>
+							    <div class="form-inline pfont">
+                                 <button type="button"  class="btn btn-info " style="margin-left:85%;outline:none;float:right;text-decoration:none; " onclick='saveProfileData("mentor_information")'>Save Changes</button>
+								
+                              </div>
+                             
+                           </form>
                   </div>
                </div>
             </div>

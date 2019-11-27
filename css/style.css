@@ -1179,7 +1179,7 @@ Community Box
 	top: 1rem;
 	right: -27.5rem;
 	max-width: 25rem;
-	\ min-width: 25rem;
+	min-width: 25rem;
 	text-decoration: none;
 	font-size: 11px;
 	color: Red;
@@ -1968,12 +1968,18 @@ Profile BOx
 	outline: none !important;
 	letter-spacing: 0.5px;
 	text-indent: 10px;
-	background: lightsteelblue;
+    border-bottom: 1px solid mediumblue;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+	background: white;
 }
 
 .pfont input:focus {
 	outline: none !important;
 	border: 1px black solid;
+    background-color:lightslategray;
+    color: black;
 }
 
 .pfont input:focus::placeholder {
@@ -2039,19 +2045,49 @@ Profile BOx
 }
 
 .editdetails {
+	position: relative;
 	width: 50rem;
+	top: 2rem;
 	height: rem;
 	border: none;
-	background-color: ghostwhite;
-	margin-top: ;
-	margin-left: -10%;
-	margin-right: 1%;
+	background-color: white;
+	margin-top:;
+	position: relative;
+	left: -12rem;
+	right: 5rem;
 	z-index: 0;
 	color: black;
-	background-color: ;
+	background-color:;
 	border-radius: 10px;
 }
-
+.profileinfotab{
+    
+    position: fixed;
+    top: 12rem;
+    left: 53rem;
+    width: 20rem;
+    right: 0;
+    transform: rotate(270deg);
+    box-shadow: -2px -1px 7px 3px lightsteelblue;
+    background-color: lightgoldenrodyellow;
+}
+.Mentorinfotab{
+    
+   
+        box-shadow: 1px 7px 10px 1px lightsteelblue;
+    background-color: lightgoldenrodyellow;
+}
+.form_textarea{
+    border-bottom:1px solid lightsteelblue ;
+	color:forestgreen;
+	font-size: 1em;
+	outline: none;
+	background-color: white;
+	min-width: 40rem;
+	max-width: 40rem;
+	min-height: 8rem;
+	max-height: 20rem;
+}
 .editinfo {
 	width: 80%;
 	float: ;
@@ -2139,17 +2175,17 @@ Profile BOx
 .edittabs.nav-tabs a[data-toggle="tab"].active {
 	border-top: none;
 	border: none;
-	color: steelblue;
+	color: white;
 	font-size: 14px;
 	border-left: none;
 	border-right: none;
-	background-color: white;
+	background-color:forestgreen;
 }
 
 .edittabs.nav-tabs a[data-toggle="tab"].active:hover {
 	border-top: none;
 	border: none;
-	color: black;
+	color: white;
 	border-left: none;
 	border-right: none;
 }
