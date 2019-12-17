@@ -70,12 +70,13 @@
    
     
    <div class="btn-group mr-1" >
+       <a class="btn btn-link mr-1 " style="color:black;"data-toggle="tooltip" data-placement="bottom"  title="Q & A" href="<?php echo base_url().'mentor';?>"><i class="fas fa-user-graduate fa-lg Mentorprofileicon"></i> Q&A</a>
       <a class="nav-link navbarsmall text-dark"class="dropdown-toggle" data-toggle="dropdown"  title="Notifications" href="#"><i data-toggle="tooltip" data-placement="bottom" class=" fas fa-exclamation-circle fa-lg notificationicon"></i> <!-- <span style="font-size:8px" class="badge badge-light">4</span>--> Notifications</a>
       <div class=" dropdown-menu text-center  border-bottom-3 border-left-2 border-right-2 border-top-2   dropdown-menu-right dropdown-menu-lg-left notification-dropdown" >
          <Span class="text-dark   font-weight-lighter text-monospace" style=font-size:12px;>No Notifications</Span>   
       </div>
    </div>
-   <a class="btn btn-link mr-1 " style="color:black;"data-toggle="tooltip" data-placement="bottom" title="Mentor"href="<?php echo base_url().'mentor';?>"><i class="fas fa-user-graduate fa-lg Mentorprofileicon"></i> Mentor Profile</a>
+   <a class="btn btn-link mr-1 " style="color:black;"data-toggle="tooltip" data-placement="bottom" title="Mentor"href="<?php echo base_url().'mentor';?>"><i class="fas fa-user-graduate fa-lg questionpageicon"></i> Mentor Profile</a>
  
 </nav>
 <div class="modal fade" style=""id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -2260,8 +2260,96 @@ Profile BOx
 .modal-full .modal-content {
 	min-height: 100vh;
 }
+/* Question Page
+*/
 
-
+  .QAsearchbar{
+			     word-spacing:3px;
+		         margin-bottom: auto;
+		         margin-top: auto;
+		         height: px;
+		         background-color:black;
+		         border-radius: 20px;
+		         padding:10px;
+				 border:none;
+				 box-shadow: 3px 3px 10px 5px blue;
+		         }
+		         .QAsearch_input{
+		         color:white;
+		         border: none;
+		         outline: 0;
+		         background: none;
+		         width: 0;
+		         caret-color:white;
+		         line-height: 0px;
+		         transition: width 0.4s linear;
+		         }
+				  .QAsearchbar  input:focus::placeholder {
+                  color:white;
+                    
+                  }
+				  .QAsearchbar  input::placeholder {
+                    
+					color:white;
+                  font-size:12px;
+                  }
+		         
+				
+				  .QAsearchbar:hover > .QAsearch_input         
+                   {
+				    padding: 0 10px;
+		            width: 290px;
+		            caret-color:red;
+					
+		            transition: width 0.4s linear;
+		          }
+				 
+				 
+				 
+				 
+				
+		         .QAsearchbar > .QAsearch_input:focus{
+		         padding: 0 10px;
+		         width: 290px;
+		         caret-color:white;
+		         transition: width 0.4s linear;
+		         }
+		         .QAsearchbar:focus > .QAsearch_icon{
+		         background: white;
+		         color:white;
+		         }
+		         .QAsearch_icon{
+				
+		         height:px;
+		         width: px;
+		         float: right;
+		         display: flex;
+		         justify-content: center;
+		         align-items: center;
+		         border-radius: 50%;
+		         color:white;
+		         }
+				   ::-webkit-scrollbar {
+					width:5px;
+					height: px;
+					border-radius:50px;
+					
+                    }
+					::-webkit-scrollbar-button {
+						background:white;
+						border-radius:50px;
+					}
+					::-webkit-scrollbar-track-piece {
+						background:white;
+						border-radius:50px;
+					}
+					::-webkit-scrollbar-thumb {
+						background: darkcyan;
+						border-radius:50px;
+					}
+.modal-open .modal{
+    display: none; 
+}
 /* 
 ##Device = Tablets, Ipads (portrait)
 ##Screen = B/w 768px to 1024px
