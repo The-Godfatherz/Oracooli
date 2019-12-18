@@ -109,7 +109,7 @@
                </div>
             </div>
             <div class="card  "id="register" style="position:;top:rem;left:;right:;border:none;width:;height:100%;
-               "><?php myconsole("sdf"); ?>
+               ">
                 <div class="mx-auto register1" ><?php 
                     if(isset($registermessage))
                     { ?>
