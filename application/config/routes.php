@@ -52,3 +52,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+/*
+|  Define API Routes
+*/
+$route['api/register'] = 'api/user/register';
+$route['api/login'] = 'api/user/login';
+$route['api/logout'] = 'api/user/logout';
+//$route['api/forgetpasswordlink'] = 'api/user/forgetPasswordLink';
+$route['api/changepasswordpost'] = 'api/user/changePasswordPost';
+$route['api/accountactivation'] = 'api/user/AccountActivation';

@@ -72,6 +72,10 @@ class User_model extends CI_Model{
         $password = $this->security->xss_clean($this->input->post('registration_password'));
         $first_name = $this->security->xss_clean($this->input->post('first_name'));
         $last_name = $this->security->xss_clean($this->input->post('last_name'));
+        $current_qualification = $this->security->xss_clean($this->input->post('current_qualification'));
+        $desired_job = $this->security->xss_clean($this->input->post('desired_job'));
+        $education = $this->security->xss_clean($this->input->post('education'));
+        $desired_skills = $this->security->xss_clean($this->input->post('desired_skills'));
 
         // Password Encryption
         $options = [
@@ -103,9 +107,13 @@ class User_model extends CI_Model{
             $this->db->insert('user_registration',$data);
             $insert_id = $this->db->insert_id();
             $profileData = array(
-            'user_reg_id'=>$insert_id,
-            'first_name'=>$first_name,
-            'last_name'=>$last_name
+                'user_reg_id' => $insert_id,
+                'first_name' => $first_name,
+                'last_name' => $last_name,
+                'current_qualification' => $current_qualification,
+                'desired_job' => $desired_job,
+                'education' => $education,
+                'desired_skills' => $desired_skills
             );
            
             // Inserting Profile Data

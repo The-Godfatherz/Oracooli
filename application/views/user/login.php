@@ -109,55 +109,95 @@
                </div>
             </div>
             <div class="card  "id="register" style="position:;top:rem;left:;right:;border:none;width:;height:100%;
-               ">
-               <div class="mx-auto register1" >
-                  <?php if(isset($registermessage)){ ?>
-                  <div class="alert alert-<?php if(isset($registertype)){echo $registertype;}?>" role="alert">
-                     <?php 
-                        echo $registermessage;
-                        ?>
-                  </div>
-                  <?php }?> 
-                  <form  method="post" id="register_form" action="<?php echo base_url();?>user/register">
-                     <div class="input-group">
-                        <input id="username" type="username"  name="username" placeholder="Username" required="">
-                        <span class="input-group-addon"><i class="fas fa-user"></i></span>
-                     </div>
-                     <div class="input-group">
-                        <div class="row w-100">
-                           <div class="col">
-                              <input type="text"  placeholder="First name" name="first_name" required="">  
-                           </div>
-                           <div class="col">
-                              <input type="text"  placeholder="Last name" name="last_name" required="">
-                           </div>
+               "><?php myconsole("sdf"); ?>
+                <div class="mx-auto register1" ><?php 
+                    if(isset($registermessage))
+                    { ?>
+                    <div class="alert alert-<?php if(isset($registertype)){echo $registertype;}?>" role="alert"><?php
+                         echo $registermessage;?>
+                    </div><?php 
+                    }?> 
+                    <form  method="post" id="register_form" action="<?php echo base_url();?>user/register">
+                        <div class="input-group">
+                            <input id="username" type="username"  name="username" placeholder="Username" required="">
+                            <span class="input-group-addon"><i class="fas fa-user"></i></span>
                         </div>
-                     </div>
-                     <div class="input-group" style="background-color:transparent;">
-                        <input id="email_registration" type="email"  name="email_registration" placeholder="Email"required="">
-                        <span class="input-group-addon"><i class="far fa-user"></i></span>
-                     </div>
-                     <div class="input-group">
-                        <input id="registration_password" type="password"  name="registration_password" placeholder="Password"required="">
-                        <span class="input-group-addon"><i class="fas fa-unlock-alt"></i>
-                        </span>
-                     </div>
-                     <div class="input-group">
-                        <input id="registration_password_confirm" type="password"  name="registration_password_confirm" placeholder="Confirm Password"required="">
-                        <span class="input-group-addon"><i class="fas fa-unlock"></i></span>
-                     </div>
-                     <button type="Submit" class="btn createaccount btn-outline-info btn-lg btn-block  " style="">Create an Account</button>
-                     <style type="text/css">
-                        .createaccount{
-                        color:black;
-                        }
-                        .createaccount:hover{
-                        color:white;
-                        }
-                     </style>
-                  </form>
-               </div>
+                        <div class="input-group">
+                            <div class="row w-100">
+                                <div class="col">
+                                    <input type="text"  placeholder="First name" name="first_name" required="">  
+                                </div>
+                                <div class="col">
+                                    <input type="text"  placeholder="Last name" name="last_name" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group" style="background-color:transparent;">
+                            <input id="email_registration" type="email"  name="email_registration" placeholder="Email"required="">
+                            <span class="input-group-addon"><i class="far fa-user"></i></span>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="row w-100">
+                                <div class="col">
+                                    <input id="registration_password" type="password"  name="registration_password" placeholder="Password"required="">
+                                    <span class="input-group-addon"><i class="fas fa-unlock-alt"></i></span>  
+                                </div>
+                                <div class="col">
+                                    <input id="registration_password_confirm" type="password"  name="registration_password_confirm" placeholder="Confirm Password"required="">
+                                    <span class="input-group-addon"><i class="fas fa-unlock"></i></span>       
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="row w-100">
+                                <div class="col">
+                                    <input id="current_qualification" type="text"  name="current_qualification" placeholder="Current Qualification" required="">
+                                    <!-- <span class="input-group-addon"><i class="fas fa-unlock-alt"></i></span>-->
+                                </div>
+                                <div class="col">
+                                    <input id="desired_job" type="text" name="desired_job" placeholder="Desired Job" required="">
+                                    <!-- <span class="input-group-addon"><i class="fas fa-unlock"></i></span>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="row w-100">
+                                <div class="col">
+                                    <input id="education" type="text"  name="education" placeholder="Education" required="">
+                                    <!-- <span class="input-group-addon"><i class="fas fa-unlock-alt"></i></span>-->
+                                </div>
+                                <div class="col">
+                                    <input id="desired_job" type="text" name="desired_skills" placeholder="Desired Skills" required="">
+                                    <!-- <span class="input-group-addon"><i class="fas fa-unlock"></i></span>-->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--
+                        <div class="input-group">
+                            <input id="registration_password" type="password"  name="registration_password" placeholder="Password"required="">
+                            <span class="input-group-addon"><i class="fas fa-unlock-alt"></i></span>
+                        </div>
+                        <div class="input-group">
+                            <input id="registration_password_confirm" type="password"  name="registration_password_confirm" placeholder="Confirm Password"required="">
+                            <span class="input-group-addon"><i class="fas fa-unlock"></i></span>
+                        </div>-->
+                        <button type="Submit" class="btn createaccount btn-outline-info btn-lg btn-block  " style="">Create an Account</button>
+                        
+                        <style type="text/css">
+                            .createaccount{
+                                color:black;
+                            }
+                            .createaccount:hover{
+                                color:white;
+                            }
+                        </style>
+                    </form>
+                </div>
             </div>
+            
             <div class="card mx-auto "id="about" style="position:;top:rem;left:;right:;border:none;width:%;height:100%;
                " >
                <span class="mr-4 ml-4 text-justify ">

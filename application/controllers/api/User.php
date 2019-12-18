@@ -17,30 +17,39 @@ class User extends CI_Controller {
 
 	public function index()
 	{
+		echo "In API index";
 		//$this->load->view('user/login');
 	}
 
 	public function login(){
+
+		$this->load->library('Authorization_Token');
+
 		$result = $this->user_model->validate();
+		
 		//$profileData = $this->user_model->profileData($this->session->userid);
 		if($result){
 			/*$this->load->view('user/mentor');*/
 			redirect('../mentee/');
-		}else{
+				}else{
 			redirect(base_url().'welcome/index/0');
 		}
 	}
 
-	public function register(){
+	public function register()
+	{
 		// grab user input
-		
-        $username = $this->security->xss_clean($this->input->post('username'));
+		$username = $this->security->xss_clean($this->input->post('username'));
         $email = $this->security->xss_clean($this->input->post('email_registration'));
         $password = $this->security->xss_clean($this->input->post('registration_password'));
+        $username = $this->security->xss_clean($this->input->post('username'));
+        $first_name = $this->security->xss_clean($this->input->post('first_name'));
+        $last_name = $this->security->xss_clean($this->input->post('last_name'));
         
 		$result = $this->user_model->register();
 		$config = $this->config->item('smtp_email_config');
-		if($result){
+		if($result)
+		{
 			$this->email->initialize($config);
 			$this->email->from('datarshaunak@gmail.com');
 			$this->email->to($email);
@@ -48,14 +57,15 @@ class User extends CI_Controller {
 			$emailData = array('activationlink' => base_url().'user/accountactivation/code/'.$result['code']);
 			$data = $this->load->view('email/email_confirmation', $emailData, TRUE);
 			$this->email->message($data);
-			if ($this->email->send()) {
-       		redirect(base_url());
-    } else {
-        show_error($this->email->print_debugger());
-    }
-    
-		}
-		
+			if ($this->email->send())
+			{
+       			redirect(base_url());
+    		} 
+    		else 
+    		{
+        		show_error($this->email->print_debugger());
+    		}
+   		}
 	}
 	
 	public function Logout()
@@ -97,7 +107,8 @@ class User extends CI_Controller {
 		$result = $this->user_model->sendForgetPasswordEmail();
 	}
 
-	public function passwordChangePage($userid){
+	public function passwordChangePage($userid)
+	{
 			$email = $this->uri->segment('6');
 			$id = $this->uri->segment('4');
 			$data = array('id' => $id , 'email' => $email);
