@@ -289,9 +289,9 @@
             
           
   <div class="form-group">
-    <label for="exampleInputEmail1">Ask a specific question.</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted"</small>
+    <label for="">Ask a question.</label>
+    <input type="text" class="form-control" id="" aria-describedby="">
+   
   </div>
     <textarea name="question" id="summernote"></textarea>
     <button type="submit">Ask Question</button>
