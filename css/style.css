@@ -2262,7 +2262,137 @@ Profile BOx
 }
 /* Question Page
 */
+.qatabs.nav-tabs a {
+	border: none;
+}
 
+.qatabs.nav-tabs {
+	border: none;
+	color: white;
+}
+
+.qatabs.nav-item {
+	width: 10rem;
+}
+
+.qatabs.nav-tabs a[data-toggle="collapse"] {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	font-size: 12px;
+	font-family: monospace;
+	text-align: center;
+	color: Black;
+}
+
+.qatabs.nav-tabs a[data-toggle="collaspe"]:hover {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+.qatabs.nav-tabs a[data-toggle="collaspe"].active {
+	border-top: none;
+	border: none;
+	color: white;
+	font-size: 12px;
+	border-left: none;
+	border-right: none;
+	background-color: transparent;
+}
+
+.qatabs.nav-tabs a[data-toggle="collapse"].active:hover {
+	border-top: none;
+	border: none;
+	color: white;
+	border-left: none;
+	border-right: none;
+}
+
+.qatabs.nav-tabs a[data-toggle="tab"] {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	font-size: 12px;
+	font-family: monospace;
+	text-align: center;
+	color: Black;
+	height: 5.5vh;
+	transition: 0.8s ease-out;
+}
+
+.qatabs.nav-tabs a[data-toggle="tab"]:hover {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	color:black;
+}
+
+.qatabs.nav-tabs a[data-toggle="tab"].active {
+	border-top: none;
+	border: none;
+	color:Blue;
+	font-size: 16px;
+	border-left: none;
+	border-right: none;
+	background-color: transparent;
+	transition: 0.5s ease-in;
+	/*box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);*/
+}
+
+
+
+.qatabs.nav-tabs a[data-toggle="tab"].active:hover {
+	border-top: none;
+	border: none;
+	color: white;
+	border-left: none;
+	border-right: none;
+}
+
+.qatabs.nav-tabs a:hover {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+.qatabs.nav-tabs a:focus {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+.qatabs.nav-tabs.active {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	height: 10vh;
+}
+
+.qatabs.nav-tabs.active:hover {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+.btnNext{
+    float:right;
+    
+    
+}
+.btnPrevious{
+    float:right;
+}
+.btnSubmit{
+    float:right;
+}
   .QAsearchbar{
 			     word-spacing:3px;
 		         margin-bottom: auto;
