@@ -90,7 +90,7 @@
                   </button>
                   <div class="form-group has-search">
                      <span class="fa fa-search form-control-feedback"></span>
-                     <input type="text" class="form-control search_text" placeholder="Search" id="search_text">
+                     <input type="text" class="form-control search_text" placeholder="Search by Firstname | Lastname | Username | Email" id="search_text">
                      <div id="search_display"></div>
                   </div>
                </div>
