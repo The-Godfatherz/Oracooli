@@ -209,38 +209,46 @@ $(document).ready(function(){
      }
    }
    
-   $(document).on('keyup','.search_text',function(e){
-   
-     if($(this).val().length == 3 || $(this).val().length > 3){
-         if(e.which == '13'){
-       search_text_get = $(this).val();
-        
-         $.ajax({
-           url: "<?php echo base_url();?>search/searchresultenter",
-           type: "POST",
-           cache: false,
-           data: {searchkey : search_text_get},
-           success: function(data){
-             $(".display_search_result").html(data);
-           },
-           error: function(){}          
-         }); 
-     }else{
-       search_text_get = $(this).val(); 
-         $.ajax({
-           url: "<?php echo base_url();?>search/searchuser",
-           type: "POST",
-           cache: false,
-           data: {searchkey : search_text_get},
-           success: function(data){
-             $('#search_display').html(data);
-           },
-           error: function(){}          
-         });
-     }  
-     }
-     
-   });
+    $(document).on('keyup','.search_text',function(e)
+    {
+        if($(this).val().length == 3 || $(this).val().length > 3)
+        {
+            if(e.which == '13')
+            {
+                search_text_get = $(this).val();
+                $.ajax({
+                    url: "<?php echo base_url();?>search/searchresultenter",
+                    type: "POST",
+                    cache: false,
+                    data: {searchkey : search_text_get},
+                    success: function(data)
+                    {
+                        $(".display_search_result").html(data);
+                    },
+                    error: function(){}          
+                }); 
+            }
+            else
+            {
+                search_text_get = $(this).val(); 
+                $.ajax({
+                    url: "<?php echo base_url();?>search/searchuser",
+                    type: "POST",
+                    cache: false,
+                    data: {searchkey : search_text_get},
+                    success: function(data)
+                    {
+                        $('#search_display').html(data);
+                    },
+                    error: function(){}          
+                });
+            }  
+        }
+        else
+        {
+            $('#search_display').html("");
+        }
+    });
    
    function StartFollow(id){
          $.ajax({

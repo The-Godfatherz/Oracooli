@@ -18,13 +18,15 @@ class Search extends CI_Controller {
 
     public function searchUser(){
         $result = $this->search_model->searchUser();
+        //myconsole($result);die;
         foreach ($result as $key => $value) {
             # code...
               echo  " <ul class='nav '>
               <li class=' mr-2 mt-1 ' >
             
                      <a style='font-size:18px;font-family:LeagueGothic-Regular;letter-spacing:0.5px;color:green' href='".base_url()."profile/index/".$value['user_reg_id']."'>
-                     <img class='card-img-top ml-1 mr-1 ' style='width:35px;height:35px' src='".get_imagepath($value['profile_image'])."' alt='Card image cap' >"  .$value['first_name']." ".$value['last_name']."</a>
+                     <img class='card-img-top ml-1 mr-1 ' style='width:35px;height:35px' src='".get_imagepath($value['profile_image'])."' alt='Card image cap' >"  
+                     .$value['first_name']." ".$value['last_name']." | <span style='color:#ff5233'>Email : ".$value['email']."</span> | <span style='color:#337dff'>Username : ".$value['username']."</span> </a>
 
             </li> </ul>";
             //print_r($value['first_name']);
@@ -32,19 +34,25 @@ class Search extends CI_Controller {
         exit;
     }
 
-    public function searchResultEnter(){
+    public function searchResultEnter()
+    {
         $result = $this->search_model->searchUser();
-        foreach ($result as $key => $value) {
+        myconsole($result);die;
+        foreach ($result as $key => $value)
+        {
             # code...
-              echo "<div class='card' style='width:50rem;background-color:transparent;font-size: 18px;height:7rem;border:none;'>
+            echo "<div class='card' 
+                        style='width:50rem;background-color:transparent;font-size: 18px;height:7rem;border:none;'>
                     <div class='card-body'>
-                      <a href='".base_url()."profile/index/".$value['user_reg_id']."'  data-content='Expertise' title='Follow<i style=float:right>Ask Questions ?</i>' data-html='true' data-placement='right' data-toggle='popover' data-trigger='hover'> <img class='card-img-top mr-1' src='".get_imagepath($value['profile_image'])."'  class='media-object' style='width:45px; height:45px;border-radius: 5px'>".$value['first_name']." ".$value['last_name']."</a><a href='#' onclick='Addfriend(".$value['user_reg_id'].")' class='btn btn-outline-info btn-sm float-right ml-2'>Add as Fiend</a>
-                      <a href='#' onclick='StartFollow(".$value['user_reg_id'].")' class='btn btn-outline-info btn-sm float-right'>Follow</a>
-                      <p class='card-text' style='font-size: 13px;margin-top:-0.8rem;margin-left: 4rem;color:green'> </p>
-                      
-                      
+                        <a href='".base_url()."profile/index/".$value['user_reg_id']."' 
+                            data-content='Expertise' title='Follow<i style=float:right>Ask Questions ?</i>' data-html='true' data-placement='right' data-toggle='popover' data-trigger='hover'> 
+                                <img class='card-img-top mr-1' src='".get_imagepath($value['profile_image'])."'  class='media-object' style='width:45px; height:45px;border-radius: 5px'>".$value['first_name']." = ".$value['last_name']. "
+                        </a>
+                        <a href='#' onclick='Addfriend(".$value['user_reg_id'].")' class='btn btn-outline-info btn-sm float-right ml-2'>Add as Friend</a>
+                        <a href='#' onclick='StartFollow(".$value['user_reg_id'].")' class='btn btn-outline-info btn-sm float-right'>Follow</a>
+                        <p class='card-text' style='font-size: 13px;margin-top:-0.8rem;margin-left: 4rem;color:green'> </p>
                     </div>
-                  </div>";
+                </div>";
 
              /* echo  " <ul>
               <div class='bg-white' >

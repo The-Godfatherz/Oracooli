@@ -476,115 +476,111 @@ class Publish_model extends CI_Model{
       exit;
     }
 	
-	    public function displayMentorsFeeds($id){   
+
+    public function displayMentorsFeeds($id)
+    {   
 
         $video_formats = array("video/mp4","video/avi","video/3gp","video/x-flv","video/webm","video/mpeg");
         $audio_formats = array("audio/mpeg");
         $image_formats = array("image/jpeg","image/png","image/bmp","image/x-icon");
         $document_formats = array("application/pdf","application/msword","text/plain","application/msexcel","application/powerpoint");
-
-        if($this->input->post('offset') == "0"){
+        if($this->input->post('offset') == "0")
+        {
             $offset = 0;
         }
-
         if($this->session->has_userdata('offset') && $this->input->post('offset') == ""){
             $offset = $this->session->userdata('offset');
-        }
+        }	
 		
+		$FollowedArr = $this->getUserFollowing($id);        
 		
-			
-		
-		$FollowedArr = $this->getUserFollowing($id);
-
-        
-		
-        $this->db->select('user_post.*, user_uploads.*')
-         ->from('user_post')
-         ->join('user_uploads', 'user_post.post_id = user_uploads.post_id');
-		 
-         $this->db->where_in('user_uploads.user_id',$FollowedArr);
-		 
-	    $this->db->where('global',1);
-		      
-                  
-         $this->db->order_by("user_post.post_id","desc");
-         $this->db->limit(5,$offset);
+        $this->db->select('user_post.*, user_uploads.*')->from('user_post')->join('user_uploads', 'user_post.post_id = user_uploads.post_id');
+        $this->db->where_in('user_uploads.user_id',$FollowedArr); 
+	    $this->db->where('global',1);  
+        $this->db->order_by("user_post.post_id","desc");
+        $this->db->limit(5,$offset);
          
         $query = $this->db->get();
         $baseurl = str_replace("index.php/","",base_url());
         $offset = $offset + 5;
         $this->session->set_userdata('offset', $offset);
-        if($query->result()){
+        if($query->result())
+        {
+            //$this->db->where('user_profile.user_reg_id',$id);   
+            //$this->db->select('user_profile');
+            $userquery = $this->db->query("select * from user_profile where id = '".$id."'")->row();
+            $name = $userquery->first_name." ".$userquery->last_name;
+    		$activecounter = 0;
+            foreach ($query->result() as $row) 
+            {
+                # code...
+        		$activecounter ++;	
+        		if ($activecounter == 1)
+                {
+        			$classactive = 'active';
+        		}
+                else 
+                {
+        			$classactive = '';
+        		}
+                $comments = $this->comments_model->getComments($row->id);
 
-        //$this->db->where('user_profile.user_reg_id',$id);   
-        //$this->db->select('user_profile');
-        $userquery = $this->db->query("select * from user_profile where id = '".$id."'")->row();
-        $name = $userquery->first_name." ".$userquery->last_name;
-		$activecounter = 0;
-		
-        foreach ($query->result() as $row) {
-            # code...
-		$activecounter ++;	
-		if ($activecounter == 1){
-			$classactive = 'active';
-		}else {
-			$classactive = '';
-		}
-        $comments = $this->comments_model->getComments($row->id);
-
-         $userquery = $this->db->query("select * from user_profile where id = '".$row->user_id."'")->row();
-        $name = $userquery->first_name." ".$userquery->last_name;
-        echo '
-		  <div class="carousel-item '.$classactive.' ">
-        <div class="card mx-auto  chovermentee  " id="Feeds'.$row->post_id.'" style="">
-         <div class="card-header" style="background-color:white;border:none;font-size:12px;">
-            <a  href="mentor.html"   data-content="Expertise" title="Follow<i style=float:right>Ask Questions </i>" data-html="true" data-placement="right" data-toggle="popover" data-trigger="hover" > 
-            <img class="card-img-top " src="'.get_imagepath($userquery->profile_image).'"  class="media-object" style="width:40px; height:40px;border-radius:50%"> <span class="chover1header ml-1">'.$name.' </span>
-			</a>
-         </div>
-         <div class="card-body p-0 ">';
-         if(in_array ( $row->content_type, $image_formats)){
-            echo '<img class="card-img-top " src="'.$baseurl.'uploads/'.$row->content_link.'" alt="Image" ></img>';
-         }else if(in_array ( $row->content_type, $audio_formats)){
-            echo '<audio controls>
-            <source src="'.str_replace('index.php/','',base_url()).'uploads/'.$row->content_link.'" type="'.$row->content_type.'">
-                    Your browser does not support the audio element.
-                </audio>';
-         }else if(in_array ( $row->content_type, $document_formats)){
-            echo '<a href="https://drive.google.com/viewer?url='.$baseurl.'uploads/'.$row->content_link.'">'.$row->content_link.'</a>';
-         }
-         else if(in_array ( $row->content_type, $video_formats)){
-            echo '<div class="embed-responsive embed-responsive-1by1">
-             <iframe width="420" height="345" src="'.$baseurl.'uploads/'.$row->content_link.'">
-              </iframe>
-           </div>';
-         }
-            echo '<div class="card-img-overlay" style="width:1px;height:1px;top:3rem">
-               <div class="clike">
-                  <ul class="list-group  ">
-                    <span> <button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$row->user_id.','.$row->post_id.')"><i class="fas fa-heart "></i>
-                     </button></span><br>
-                    <span> <button type="button" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
-                     </button> </span><br>
-                     <span><button type="button" class="btn btn-primary btn-circle2" onclick="saveBookmark('.$id.','.$row->post_id.')"> <i class="fas fa-bookmark"></i>
-                     </button></span>
-                  </ul>
-               </div>
-            </div>
-            
-            
-         </div>
-          <div class="card-footer text-muted comment   border-dark p-2" style="border:none;background-color:transparent">
-            <h6 class="card-title">'.$row->post_title.'</h6>
-            <div class="card-text "id="module">
-               <a role="button" data-toggle="collapse" href="#Description'.$row->post_id.'" aria-expanded="false" aria-controls="Description" style="margin-left:5rem;"
-                >more...
-               </a><br>
-               <div style="" class="collapse"  id="Description'.$row->post_id.'" aria-expanded="false">
-                  '.$row->post_description.'
-               </div>
-               <a href="#" class="" style="text-align:center;font-size:12px" data-toggle="collapse" data-target="#comment"> View all Comments </a>
-               <div class=" collaspe display_comments comments_'.$row->post_id.' show" id="comment"  >';
+                $userquery = $this->db->query("select * from user_profile where id = '".$row->user_id."'")->row();
+                $name = $userquery->first_name." ".$userquery->last_name;
+                echo '
+        		  <div class="carousel-item '.$classactive.' ">
+                <div class="card mx-auto  chovermentee  " id="Feeds'.$row->post_id.'" style="">
+                    <div class="card-header" style="background-color:white;border:none;font-size:12px;">
+                        <a  href="mentor.html"   data-content="Expertise" title="Follow<i style=float:right>Ask Questions </i>" data-html="true" data-placement="right" data-toggle="popover" data-trigger="hover" > 
+                            <img class="card-img-top " src="'.get_imagepath($userquery->profile_image).'"  class="media-object" style="width:40px; height:40px;border-radius:50%"> <span class="chover1header ml-1">'.$name.' </span>
+        			     </a>
+                    </div>
+                    <div class="card-body p-0 ">';
+                    if(in_array ( $row->content_type, $image_formats))
+                    {
+                        echo '<img class="card-img-top " src="'.$baseurl.'uploads/'.$row->content_link.'" alt="Image" ></img>';
+                    }
+                    else if(in_array ( $row->content_type, $audio_formats))
+                    {
+                        echo '<audio controls>
+                        <source src="'.str_replace('index.php/','',base_url()).'uploads/'.$row->content_link.'" type="'.$row->content_type.'">
+                                Your browser does not support the audio element.
+                            </audio>';
+                     }
+                     else if(in_array ( $row->content_type, $document_formats))
+                     {
+                        echo '<a href="https://drive.google.com/viewer?url='.$baseurl.'uploads/'.$row->content_link.'">'.$row->content_link.'</a>';
+                     }
+                     else if(in_array ( $row->content_type, $video_formats))
+                     {
+                        echo '<div class="embed-responsive embed-responsive-1by1">
+                         <iframe width="420" height="345" src="'.$baseurl.'uploads/'.$row->content_link.'">
+                          </iframe>
+                       </div>';
+                     }
+                    echo '<div class="card-img-overlay" style="width:1px;height:1px;top:3rem">
+                       <div class="clike">
+                          <ul class="list-group  ">
+                            <span> <button type="button"  class="btn btn-danger btn-circle" onclick="savePostlike('.$row->user_id.','.$row->post_id.')"><i class="fas fa-heart "></i>
+                             </button></span><br>
+                            <span> <button type="button" class="btn btn-info btn-circle1"><i class="fas fa-share-alt "></i>
+                             </button> </span><br>
+                             <span><button type="button" class="btn btn-primary btn-circle2" onclick="saveBookmark('.$id.','.$row->post_id.')"> <i class="fas fa-bookmark"></i>
+                             </button></span>
+                          </ul>
+                       </div>
+                    </div>
+                    </div>
+                    <div class="card-footer text-muted comment   border-dark p-2" style="border:none;background-color:transparent">
+                        <h6 class="card-title">'.$row->post_title.'</h6>
+                        <div class="card-text "id="module">
+                            <a role="button" data-toggle="collapse" href="#Description'.$row->post_id.'" aria-expanded="false" aria-controls="Description" style="margin-left:5rem;">more...
+                            </a><br>
+                            <div style="" class="collapse"  id="Description'.$row->post_id.'" aria-expanded="false">
+                          '.$row->post_description.'
+                            </div>
+                            <a href="#" class="" style="text-align:center;font-size:12px" data-toggle="collapse" data-target="#comment"> View all Comments </a>
+                            <div class=" collaspe display_comments comments_'.$row->post_id.' show" id="comment"  >';
 
          if($comments){
             foreach ($comments as $comment_data) {
